@@ -8,7 +8,6 @@
 \usepackage[margin=1.0in]{geometry}
 \usepackage{tabularx}
 \usepackage{xcolor}
-\usepackage{itemize}
 \usepackage[most]{tcolorbox}
 
 \tcbset{
@@ -239,11 +238,12 @@ first of which we'll examine is through constructors.}
     define a constructor in a Python class we use the special function init
     function.  Lets take the example from 1.1 and change it so that we can set
 it to hold a different message.}
+\\
 \begin{minipage}{.5\textwidth}
-    \small \textbf{Classes}
+    \small \textbf{Ex 1.2}
     \begin{tcolorbox}
         \begin{footnotesize}
-            Ex 1.2
+            \begin{verbatim}
             >>> class WordPrinter():
             >>>     word = "Hello World"
             >>>     def __init__(self, msg):
@@ -251,31 +251,34 @@ it to hold a different message.}
             >>>
             >>>     def printWord(self):
             >>>         print self.word
-            >>> wp = WordPrinter("Hello Jeorge") >>> wp.printWord()
+            >>> wp = WordPrinter("Hello Jeorge") 
+            >>> wp.printWord()
             >>>
             >>> Hello Jeorge
             \end{verbatim}
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
+\\ \\
 \textbf{Types}
 \par{In programming it is important to differentiate between different data
 types you may use. In Python there are five basic data types: }
 \begin{itemize}
-        * Numbers
-        * String
-        * List
-        * Tuple
-        * Dictionary
+    \item Numbers
+    \item String
+    \item List
+    \item Tuple
+    \item Dictionary
 \end{itemize}
 \textbf{Numbers}
 \par{Numbers in Python come in many differnt several differnt varieties
 including floating point, integer and long types.}
+\\ \\
 \begin{minipage}{.5\textwidth}
-    \small \textbf{Classes}
+    \small \textbf{Ex 1.3}
     \begin{tcolorbox}
         \begin{footnotesize}
-            Ex 1.3
+            \begin{verbatim}
             >>> numA = 3.2           # Floating point
             >>> numB = 2             # Integer
             >>> numC = 535633629843L # Long
