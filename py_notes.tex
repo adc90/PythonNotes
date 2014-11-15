@@ -8,6 +8,7 @@
 \usepackage[margin=1.0in]{geometry}
 \usepackage{tabularx}
 \usepackage{xcolor}
+\usepackage{itemize}
 \usepackage[most]{tcolorbox}
 
 \tcbset{
@@ -228,4 +229,61 @@ the declaration we have the variable definition \texttt{word} which is
 attached to the \texttt{test} class. Similarly we have a function attached to the
 test class called \texttt{printWord} which will print the contents of the
 variable word.}
+\textbf{Objects}
+\par{In our analogy we compared objects to houses built from a set of
+blueprints.  Like our real world example, we sometimes need to make adjustments
+to a class when creating it. This can be done in several different ways the
+first of which we'll examine is through constructors.} 
+\par{Constructors in object oriented programming are special methods that are
+    called when we create an instance of an object from a class. In order to
+    define a constructor in a Python class we use the special function init
+    function.  Lets take the example from 1.1 and change it so that we can set
+it to hold a different message.}
+\begin{minipage}{.5\textwidth}
+    \small \textbf{Classes}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            Ex 1.2
+            >>> class WordPrinter():
+            >>>     word = "Hello World"
+            >>>     def __init__(self, msg):
+            >>>         self.word = msg
+            >>>
+            >>>     def printWord(self):
+            >>>         print self.word
+            >>> wp = WordPrinter("Hello Jeorge") >>> wp.printWord()
+            >>>
+            >>> Hello Jeorge
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\textbf{Types}
+\par{In programming it is important to differentiate between different data
+types you may use. In Python there are five basic data types: }
+\begin{itemize}
+        * Numbers
+        * String
+        * List
+        * Tuple
+        * Dictionary
+\end{itemize}
+\textbf{Numbers}
+\par{Numbers in Python come in many differnt several differnt varieties
+including floating point, integer and long types.}
+\begin{minipage}{.5\textwidth}
+    \small \textbf{Classes}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            Ex 1.3
+            >>> numA = 3.2           # Floating point
+            >>> numB = 2             # Integer
+            >>> numC = 535633629843L # Long
+            >>> print(numA + numB)
+            >>> 
+            >>> 5.2
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
 \end{document}
