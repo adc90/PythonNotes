@@ -1,0 +1,6 @@
+#Stuff for git to ignore
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.thm

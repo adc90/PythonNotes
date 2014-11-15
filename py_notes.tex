@@ -1,0 +1,231 @@
+%------------------------------------------------------------------
+% Python notes
+%------------------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
+%---------------------
+% Packages
+%---------------------
+\usepackage[margin=1.0in]{geometry}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+\tcbset{
+    frame code={}
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!40,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=5pt,
+    arc=0pt,outer arc=0pt,
+}
+%---------------------
+
+%---------------------
+% Macros & Misc
+%---------------------
+\topmargin=-1.0in
+\setlength{\textheight}{10in}
+\pagenumbering{gobble}
+%---------------------
+% Document start
+%---------------------
+\begin{document}
+\begin{flushleft}
+    \LARGE{\textbf{Python notes}}
+\end{flushleft}
+\textbf{Python Intro}
+\par{Python is an extremely powerful and dynamic object-oriented programming.
+There are several reasons to use Python. One of the biggest draws is
+portability. Python runs on almost every operating system. In addition python is
+fairly easy to pick up}
+\\
+\textbf{Invoking Python}
+\par{One \emph{windows} you invoke the python interpreter by launching the
+\texttt{cmd} utility and entering in \texttt{python} which should give you a
+prompt similar to the one bellow.}
+\begin{tcolorbox}
+\begin{footnotesize}
+\begin{verbatim}
+Python 2.6.6 (r266:84297, Aug 24 2010, 18:46:32) [MSC v.1500 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information
+>>>
+\end{verbatim}
+\end{footnotesize}
+\end{tcolorbox}
+\textbf{Functions}
+\par{One of the most basic building blocks of any programming language is the
+function. In python functions are defined with the \textem{def} keyword.
+Functions have two main parts, the function declaration and the function body. }
+\\
+\begin{minipage}{.5\textwidth}
+\begin{tcolorbox}
+\begin{footnotesize}
+\begin{verbatim}
+>>> def functionName():          #Decleration
+>>>    print "Hello World!"      #Function body
+...
+>>> functionName()
+>>> Hello World!
+\end{verbatim}
+\end{footnotesize}
+\end{tcolorbox}
+\end{minipage}
+\par{Functions can also take take arguments. These arguments can be passed in
+between the parentheses of the function definition. These arguments can then be
+accessed in the body of the function.}
+\begin{minipage}{.5\textwidth}
+\begin{tcolorbox}
+\begin{footnotesize}
+\begin{verbatim}
+>>> def argumentFuction(a, b):
+>>>    print "A=" + a + " B=" + b
+...
+>>> argumentfuction(1,2)
+>>> A=1 B=2
+\end{verbatim}
+\end{footnotesize}
+\end{tcolorbox}
+\end{minipage}
+\\
+\textbf{Variables}
+\par{Another basic building block of any programming language is variables.
+Variables consist of three components \textem{type}, \textem{indentifier}, and
+a \textem{value}. \texttt{Python} is what is known as a \texttt{dynamic}
+language. What this means is that you are not required to include a type
+delcration, in contrast to strongly typed languages such as \texttt{Java} or
+\texttt{C++}.}
+\\ \\
+%
+\begin{minipage}{.5\textwidth}
+    \small \textbf{Java}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+            >>> int number = 5;
+            ...
+            >>> System.out.print(number);
+            ...
+            >>> 5
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+%
+\begin{minipage}{.5\textwidth}
+    \small \textbf{Python}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+            >>> number = 5
+            ...
+            >>> print(5)
+            ...
+            >>> 5
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\\
+\textbf{Conditional}
+\par{Python supports conditional statements in the form of \textem{if, else}
+and \textem{elif}. The way if statements work is the code below the if statement
+is executed if the condition is true.} \\ \\
+\begin{minipage}{.5\textwidth}
+    % \small \textbf{If statement}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+            >>> x = True
+            >>> if x == True:
+            >>>     print "x is true"
+            >>> elif x == False:
+            >>>     print "x is false"
+            >>> else:
+            >>>     print "x is neither"
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\\ \\
+\clearpage
+\textbf{Looping Constructs}
+\par{Python features several constructs to repeat a statement. The first of
+these explressions is the \texttt{while} loop. Thie while loop repeats the code
+below the loop while the condition is true.}
+\\ \\
+\begin{minipage}{.5\textwidth}
+    \small \textbf{While loop}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+            >>> x = 1
+            >>> while x < 10:
+            >>>     print(str(x) + ","),
+            >>>     x += 1
+            ...
+            >>> 1,2,3,4,5,6,7,8,9,
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\par{Another type of loop in Python is the \texttt{for} loop. The syntax of the
+for loop is \texttt{for item in sequence: block}. Each loop item is set to the
+next item in the sequence and the block of code is executed.}
+\\ \\
+\begin{minipage}{.5\textwidth}
+    \small \textbf{For loop}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+            >>> word = "Python"
+            >>> for ch in word:
+            >>>     print(ch + "-"),
+            ...
+            >>> P-y-t-h-o-n-
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\\
+\textbf{Python Classes}
+\par{Object oriented programming \textit{(O.O.P.)} is a programming paradigm that is used to
+    model real world objects and situations. Two of the main concepts involved
+in \textit{O.O.P.} are classes and objects. To make an analogy to the real
+world classes are like a blue print for a house and objects would be instances
+of that house.}
+\par{Classes in Python are basically a collection of variables and functions. In
+the context of object oriented programming functions are referred to as methods
+and variables are referred to as fields, or attributes. Lets take a look at an
+example bellow.}
+\\ \\
+\begin{minipage}{.5\textwidth}
+    \small \textbf{Classes}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+            >>> class test():
+            >>>    word = "Hello World"
+            >>>    def printWord(self):
+            >>>       print self.word
+            >>>
+            >>> t = test()
+            >>> t.printWord()
+            >>>
+            >>> Hello World
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\par{In the example above the class declaration starts with the keyword
+\texttt{class} followed by an identifier and a pair of parentheses. Following
+the declaration we have the variable definition \texttt{word} which is
+attached to the \texttt{test} class. Similarly we have a function attached to the
+test class called \texttt{printWord} which will print the contents of the
+variable word.}
+\end{document}
