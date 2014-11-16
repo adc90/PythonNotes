@@ -333,26 +333,67 @@ quotes. Python treats single quotes the same as double quotes.}
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
-\end{document}
 \\
-\textbf{Accesing Values in Strings}
-\par{Although Python does not support the \texttt{char} data type you can still
-    access parts of a \texttt{string} in Python as if it were made up of a list
-of \texttt{chars}.}
+\textbf{String concatination}
+\\
+\par{One common programming task is combining two strings. Combining strings in
+    programming is refered to as string concatination. In Python we combine
+strings by using the \+ operator}
 \\ \\
 \begin{minipage}{.5\textwidth}
     \small \textbf{Ex 1.3}
     \begin{tcolorbox}
         \begin{footnotesize}
             \begin{verbatim}
-            >>> var1 = "ABCDEFG"
-            >>> print(var1[0])    
-            >>> print(var1[2:5])
-            >>> 
-            >>> A
-            >>> CDE
+            >>> var1 = "Hello"
+            >>> var2 = var1 + " Jeorge"
+            >>> print(var2)    
+            >>>
+            >>> Hello Jeorge
             \end{verbatim}
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
 \end{document}
+
+% \textbf{Accesing Values in Strings}
+% \par{Although Python does not support the \texttt{char} data type you can still
+%     access parts of a \texttt{string} in Python as if it were made up of a list
+% of \texttt{chars}.}
+% \\ \\
+% \begin{minipage}{.5\textwidth}
+%     \small \textbf{Ex 1.3}
+%     \begin{tcolorbox}
+%         \begin{footnotesize}
+%             \begin{verbatim}
+%             >>> var1 = "ABCDEFG"
+%             >>> print(var1[0])    
+%             >>> print(var1[2:5])
+%             >>> 
+%             >>> A
+%             >>> CDE
+%             \end{verbatim}
+%         \end{footnotesize}
+%     \end{tcolorbox}
+% \end{minipage}
+% \\
+% \textbf{Updating Strings}
+% \\
+% \par{In python you can update a \texttt{string} by reassigning a variable to
+% another string.}
+% \\ \\
+% \begin{minipage}{.5\textwidth}
+%     \small \textbf{Ex 1.3}
+%     \begin{tcolorbox}
+%         \begin{footnotesize}
+%             \begin{verbatim}
+%             >>> var1 = "Hello World!"
+%             >>> var1 = var1[:6] + "Python"
+%             >>> print(var1)
+%             >>> 
+%             >>> Hello Python
+%             \end{verbatim}
+%         \end{footnotesize}
+%     \end{tcolorbox}
+% \end{minipage}
+% \par{}
