@@ -36,6 +36,7 @@
 \setlength{\tabcolsep}{1pt}
 %\pagenumbering{gobble}
 \setlist{nosep}
+\setlength{\parindent}{0pt}
 %---------------------
 % Document start
 %---------------------
@@ -43,14 +44,14 @@
 \begin{flushleft}
     \LARGE{\textbf{Python notes}}
 \end{flushleft}
-\textbf{Python Intro}
+\textbf{Introduction}
 \par{Python is an extremely powerful and dynamic object-oriented programming.
-There are several reasons to use Python. One of the biggest draws is
-portability. Python runs on almost every operating system. In addition python is
-fairly easy to pick up}
+There are several reasons to use Python one of the biggest draws being
+portability. Python is able to run on almost operating system. In addition
+python is fairly easy to pick up}
 \\
 \textbf{Invoking Python}
-\par{One \emph{windows} you invoke the python interpreter by launching the
+\par{On windows the python interpreter is invoked by launching the
 \texttt{cmd} utility and entering in \texttt{python} which should give you a
 prompt similar to the one below.}
 \\
@@ -67,9 +68,10 @@ Type "help", "copyright", "credits" or "license" for more information
 \end{minipage}
 \\
 \textbf{Functions}
-\par{One of the most basic building blocks of any programming language is the
-function. In python functions are defined with the \textem{def} keyword.
-Functions have two main parts, the function declaration and the function body. }
+\par{One of the most basic building blocks of any programming language are
+functions. In python functions are defined with the \texttt{def} keyword.
+Functions consist of two main parts, the function declaration and the function
+body.}
 \\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
@@ -84,39 +86,39 @@ Hello World!
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
-\par{Functions can also take take arguments. These arguments can be passed in
-between the parentheses of the function definition. These arguments can then be
-accessed in the body of the function.}
+\par{One job of functions is to accept arguments and optionally return a value.}
+\\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
         \begin{footnotesize}
             \begin{verbatim}
->>> def argumentFuction(a, b=3):
->>>    print "A=" + a + " B=" + b
+>>> def argFuction(a, b=3):
+>>>     return a + b   
 >>>
->>> argumentfuction(1,2)
-A=1 B=2
->>> argumentfuction(1)
-A=1 B=3
+>>> print argFuction(1,2)
+3
+>>> print argFuction(1)
+4
             \end{verbatim}
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
 \par{Something that you may have noticed in the preceding example is that we set
-the second argument to \texttt{b} to equal 3. This is what is called a default
-argument which allows us to leave out the second argument in the last function
-call.}
+the second argument \texttt{b} to equal 3. This is what is called a
+\texttt{default argument} which allows us to leave out the second argument in
+the last function call.}
 \\
 \textbf{Variables}
 \par{Another basic building block of any programming language is variables.
-Variables consist of three components \textem{type}, \textem{identifier}, and
-a \textem{value}. \texttt{Python} is what is known as a \texttt{dynamic}
-language. What this means is that you are not required to include a type
-declaration, in contrast to strongly typed languages such as \texttt{Java} or
-\texttt{C++}.}
-\\ \\
+    Variables consist of three components \textem{type}, \textem{identifier},
+    and a \textem{value}. Python is what is known as a \texttt{dynamic
+    language}. What this means is that you are not required to include a type
+declaration, in contrast to strongly typed languages such as \textit{Java} or
+\textit{C++}.}
+\\ 
 %
 \begin{minipage}{.5\textwidth}
+    Java
     \begin{tcolorbox}
         \begin{footnotesize}
             \begin{verbatim}
@@ -130,6 +132,7 @@ declaration, in contrast to strongly typed languages such as \texttt{Java} or
 \end{minipage}
 %
 \begin{minipage}{.5\textwidth}
+    Python
     \begin{tcolorbox}
         \begin{footnotesize}
             \begin{verbatim}
@@ -143,9 +146,10 @@ declaration, in contrast to strongly typed languages such as \texttt{Java} or
 \end{minipage}
 \\
 \textbf{Conditional}
-\par{Python supports conditional statements in the form of \textem{if, else}
-and \textem{elif}. The way if statements work is the code below the if statement
-is executed if the condition is true.} \\ \\
+\par{Python supports conditional statements in the form of \texttt{if},
+\texttt{else} and \texttt{elif}. The way if statements work is the code below
+the if statement is executed if the condition is true.} 
+\\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
         \begin{footnotesize}
@@ -163,12 +167,12 @@ x is true
     \end{tcolorbox}
 \end{minipage}
 \par{In the example above we used the equals operator \texttt{(==)} to test if x
-was true. In reality we would not need to compare x to the \texttt{boolean} True
-since if checks for a true statement to start with.}
+was true. In reality we wouldn't need to compare x to the \texttt{boolean} True
+since \texttt{if} checks for a true statement to begin with.}
 \par{In addition to the \texttt{==} operator there are also a number of other
 boolean and comparison operators available in python which we'll show in the
 tables below.}
-\\ \\
+\\ 
 \begin{tabular}[t]{l l}
     \textbf{Boolean Operators}  \\
     \hline
@@ -186,13 +190,14 @@ tables below.}
     x \texttt{>=} y & Evaluates to true if x is greater than or equal to y \\
     x \texttt{==} y & Evaluates to true if x and y are equal               \\
     x \texttt{!=} y & Evaluates to true if x and y are not equal           \\
+    x in [1,2,3]    & Used to test if x is in a list, tuple, string or dictionary \\ 
 \end{tabular}
 \\ \\
 \textbf{Looping Constructs}
-\par{Python features several constructs to repeat a statement. The first of
-these expressions is the \texttt{while} loop. The while loop repeats the code
-below the loop while the condition is true.}
-\\ \\
+\par{Python features several constructs which you can use to repeat a statement.
+The first of these expressions is the \texttt{while} loop. The \texttt{while}
+loop repeats the code below the loop while the condition is true.}
+\\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
         \begin{footnotesize}
@@ -210,7 +215,7 @@ below the loop while the condition is true.}
 \par{Another type of loop in Python is the \texttt{for} loop. The syntax of the
 for loop is \texttt{for item in sequence: block}. Each loop item is set to the
 next item in the sequence and the block of code is executed.}
-\\ \\
+\\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
         \begin{footnotesize}
@@ -224,29 +229,71 @@ P-y-t-h-o-n-
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
+\par{There are times when your working with loops when you may need to break out
+of the loop. Two common ways of doing this is through the keywords
+\texttt{contiue} and \texttt{break}. The first keyword \texttt{break} will like
+the name implies break you out of the loop.}
+\par{You may notice in our previous example the the hyphinated word 'Python' has
+a trailing dash, one way to deal with this is to use the break keyword in
+combination with an \texttt{if} statement.} 
 \\
-\textbf{Python Classes}
-\par{Object oriented programming \textit{(O.O.P.)} is a programming paradigm that is used to
-    model real world objects and situations. Two of the main concepts involved
-in \textit{O.O.P.} are classes and objects. To make an analogy to the real
-world classes are like a blue print for a house and objects would be instances
-of that house.}
-\par{Classes in Python are basically a collection of variables and functions. In
-the context of object oriented programming functions are referred to as methods
-and variables are referred to as fields, or attributes. Lets take a look at an
-example below.}
-\\ \\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
         \begin{footnotesize}
             \begin{verbatim}
->>> class test():
+>>> word = "Python"
+>>> for ch in word:
+>>>     if(ch == word[-1])
+>>>         print(ch), 
+>>>         break
+>>>     print(ch + "-"),
+>>>
+P-y-t-h-o-n
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\par{The \texttt{continue} keyword is another programming construct that will
+allow you to skip an interation of a loop. Lets take a look at an example in
+which we skip the 4th element in a list.}
+\begin{minipage}{.5\textwidth}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+>>> a = [1,2,3,4,5,6,7]
+>>> for x in a:
+>>>     if x == a[3]
+>>>         continue 
+>>>     print x,
+>>>
+1 2 3 5 6 7
+            \end{verbatim}
+        \end{fotnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\\
+\textbf{Python Classes}
+\par{Object oriented programming \textit{(O.O.P.)} is a programming paradigm
+    that is used to model real world objects and situations. Two of the main
+    concepts involved in \textit{O.O.P.} are classes and objects. To make an
+    analogy to the real world, classes are like a blue print for a house and
+objects would be instances of that house.}
+\par{Classes in Python are basically a collection of variables and functions. In
+the context of object oriented programming functions are referred to as methods
+and variables are referred to as fields, or attributes. Lets take a look at an
+example below.}
+\\ 
+\begin{minipage}{.5\textwidth}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+>>> class WordPrinter():
 >>>    word = "Hello World"
 >>>    def printWord(self):
 >>>       print self.word
 >>>
->>> t = test()
->>> t.printWord()
+>>> wp = test()
+>>> wp.printWord()
 >>>
 Hello World
             \end{verbatim}
@@ -256,19 +303,19 @@ Hello World
 \par{In the example above the class declaration starts with the keyword
 \texttt{class} followed by an identifier and a pair of parentheses. Following
 the declaration we have the variable definition \texttt{word} which is
-attached to the \texttt{test} class. Similarly we have a function attached to the
+attached to the \texttt{WordPrinter} class. Similarly we have a function attached to the
 test class called \texttt{printWord} which will print the contents of the
 variable word.}
 \\
 \textbf{Objects}
 \par{In our analogy we compared objects to houses built from a set of
 blueprints.  Like our real world example, we sometimes need to make adjustments
-to a class when creating it. This can be done in several different ways the
-first of which we'll examine is through constructors.}
+to a class when creating it. This can be done through the use of a special
+method call the \texttt{constructor}.}
 \par{Constructors in object oriented programming are special methods that are
     called when we create an instance of an object from a class. In order to
     define a constructor in a Python class we use the special function init
-    function.  Lets take the example from 1.1 and change it so that we can set
+    function.  Lets take the previous example and change it so that we can set
 it to hold a different message.}
 \\
 \begin{minipage}{.5\textwidth}
@@ -293,8 +340,9 @@ it to hold a different message.}
 \\
 \textbf{Inheritance}
 \par{One important concept in object oriented programming is inheritance.
-Inheritance allows you to reuse parts of your code by deriving it from a
-preexisting class. Lets take a look at how this is done below.}
+Inheritance allows you to reuse parts of your code by deriving and extending a
+new class from a preexisting class. Lets take a look at how this is done in the
+example below.}
 \\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
@@ -326,6 +374,11 @@ preexisting class. Lets take a look at how this is done below.}
     \end{flushleft}
 \end{tcolorbox}
 \end{minipage}
+\par{You may noticed in the \textit{Mammal} class the funciton \texttt{talk}
+    just has the word \texttt{pass} in the body. Since the python language relys
+    on indentation to seperate code it is nessisary to place a statment in the
+    body of a function. In python the keyword \texttt{pass} serves as a place
+    holder for a function body.}
 \\
 \textbf{Types}
 \par{In programming it is important to differentiate between different data
@@ -361,13 +414,6 @@ expression containing two types to a common type. However there are times when
 you will need to coerce a number explicitly from one type to another. For this
 python offers a number of built in conversion functions.}
 \\
-% \begin{itemize}
-%     \item int(x)       : converts x to a plain integer
-%     \item long(x)      : converts x into a long integer
-%     \item float(x)     : converts x into a floating-point number
-%     \item complex(x)   : converts x to a complex number with a real part x and an imaginary part zero
-%     \item complex(x,y) : converts x to a complex number with a real part x and an imaginary part y
-% \end{itemize}
 \begin{tabular}[t]{l l}
     \textbf{Numerical Conversion Functions} &                                                   \\
     \hline
@@ -378,8 +424,8 @@ python offers a number of built in conversion functions.}
     complex(x,y) & converts x to a complex number with a real part x and an imaginary part y    \\
 \end{tabular}
 \\
-\par{In addition Python also includes a variety of functions that perform
-standard mathematical calculations.}
+\par{In addition Python also includes a variety of functions and numberical
+operators that perform standard mathematical calculations.}
 \\
 \begin{tabular}[t]{l l}
     \textbf{Common Math Functions} &                               \\
@@ -394,10 +440,21 @@ standard mathematical calculations.}
     floor(x) & Returns the floor of x                              \\
     log(x)   & Returns the natural logarithm of x                  \\
 \end{tabular}
+\\
+\begin{tabular}[t]{l l}
+    \textbf{Common Math Functions} &                               \\
+    \hline
+    a + b  & Adds two numbers together.                 \\
+    a - b  & Subtracts b from a.                        \\
+    a * b  & Multiplies the variables a and b together. \\
+    a / b  & Devides b by a.                            \\
+    a ** b & Raises a to the b power. $a^b$             \\
+    a \% b & Returns the remainder of b divided by a.   \\
+\end{tabular}
 \\ \\
 \textbf{Strings}
 \par{Strings are used in almost all languages to represent things like names,
-conversation and anything else that you would write using normal language. To
+conversation and anything else that you could write using normal language. To
 create a \texttt{string} in Python you simply enclose a list of characters in
 quotes. Python treats single quotes the same as double quotes.}
 \\ \\
@@ -430,12 +487,28 @@ Hello Jeorge
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
+\par{Another neat trick that you might not use as often is using the \textt{*}
+operator with a string, for example.}
+\\
+\begin{minipage}{.5\textwidth}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+>>> var1 = "Hello "
+>>> var2 = var1 * 4
+>>> print var2 
+>>>
+Hello Hello Hello Hello 
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
 \\ \\
 \textbf{List}
 \par{One of the most basic data structures in Python is \texttt{list}. Each
 element in a list is assigned a number, its position or index. In Python and
 most programming languages the indexing starts at zero.}
-\par{List in Python are written as a list of comma-separated values between
+\par{List in Python are written as a sequence of comma-separated values between
 square brackets. These list are not required to be made up of all the same
 types.}
 \\
@@ -472,7 +545,7 @@ obtain the value at that index.}
 \\
 \textbf{Updating List}
 \par{List can be updated in a variety of differing ways. One common way of
-    updating a list is to assign a new value to a particular index using the bracket
+updating a list is to assign a new value to a particular index using bracket
 notation.}
 \\
 \begin{minipage}{.5\textwidth}
@@ -526,7 +599,7 @@ in methods that can be called on list to help you work with them.}
 called on list.}
 \\
 \begin{tabular}[t]{l l}
-    \textbf{Python List Methods}  \\
+    \textbf{Python List Functions}  \\
     \hline
     cmp(list1,list2) & Compares elements of both list.                    \\
     len(list)        & Gives the total length of the list.                \\
@@ -579,19 +652,19 @@ use parentheses.}
 \textbf{Dictionaries}
 \par{A \texttt{dictionary} in Python is a type of data structure that can store
 any number of Python objects, including other container types such as list.
-Dictionaries consist of pairs of keys and their corresponding values.}
+Dictionaries consist of pairs of \texttt{keys} and their corresponding \texttt{values}.}
 \\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
         \begin{footnotesize}
             \begin{verbatim}
->>> dict = {'Alice': 2341, 'Beth': 9102, 'Cecil': 3258}
+>>> dict = {'Alice': 2341, 'Beth': 9102}
             \end{verbatim}
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
 \par{Each key is separated from its value by a colon, the items are separated by
-comas and the entire data structure is enclosed by brackets. TO access elements
+comas and the entire data structure is enclosed by brackets. To access elements
 in a dictionary you can use the familiar square brackets along with the key to
 obtain the value.}
 \\
@@ -600,8 +673,8 @@ obtain the value.}
         \begin{footnotesize}
             \begin{verbatim}
 >>> dict = {'Name': 'Zara', 'Age': 7}
->>> print(dict['Name'])
->>> print(dict['Age'])
+>>> print dict['Name']
+>>> print dict['Age']
 >>>
 Zara
 7
@@ -621,8 +694,8 @@ existing entry, or deleting an entry as shown in the following example.}
 >>> dict['Age'] = 8
 >>> dict['Weight'] = 125
 >>>
->>> print(dict['Age'])
->>> print(dict['Weight'])
+>>> print dict['Age'] 
+>>> print dict['Weight'] 
 >>>
 8
 125
@@ -639,7 +712,7 @@ existing entry, or deleting an entry as shown in the following example.}
     str(dict)        & Produces a printable string representation of a dictionary. \\
 \end{tabular}
 \\
-\begin{tabular}[t]{l l}
+\begin{tabular}[t]{l l}\setlength{\tabcolsep}{10pt}
     \textbf{Python Dictionary Methods}  \\
     \hline
     dict.clear()               & Removes all elements of dictionary dict.                                   \\
@@ -683,6 +756,63 @@ examples are done using a list, the same syntax can be applied to
 >>> a[-1]   # G
 >>> a[::-1] # ['G','F','E','D','C','B','A']
 >>> a[::2]  # ['A','C','E','G']
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\\
+\textbf{Exception Handeling}
+\par{Something that is gaurenteed as a programmer is that you'll eventaully run
+into errors. One way of mitigating the problems that may stem from these
+programming errors is to use what is called exception handeling. Handeling
+exceptions involves the use of four main constructs; \texttt{try},
+\texttt{except}, \texttt{finally} and \texttt{raise}.} 
+\par{One simple example where you might use exception handeling is creating a
+function that takes two arguments and divides them.}
+\\
+\begin{minipage}{.75\textwidth}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+>>> def reciprocal(a,b):
+>>>    try:
+>>>        r = a/b
+>>>    except:
+>>>        print('Exception caught')
+>>>        return
+>>>    return r
+>>>
+>>> print reciprocal(1,0)
+>>> print reciprocal(8,2)
+>>>
+Exception caught
+4
+            \end{verbatim}
+        \end{footnotesize}
+    \end{tcolorbox}
+\end{minipage}
+\par{Another way of writing the preceding example is to raise an exception
+yourself. In the preceding example python raises an exception when you try to
+devide by zero. In the example below we'll raise an exception ourselves using
+the \texttt{raise} keyword if the second option is zero. }
+\\
+\begin{minipage}{.75\textwidth}
+    \begin{tcolorbox}
+        \begin{footnotesize}
+            \begin{verbatim}
+>>> def reciprocal(a,b):
+>>>    if b == 0:
+>>>       raise ZeroDivisionError
+>>>    return a/b
+>>>
+>>> try: 
+>>>     print reciprocal(1,0)
+>>> except ZeroDivisionError as e:
+>>>     print e
+>>> finally:
+>>>     print "This is always called"
+>>> 
+
             \end{verbatim}
         \end{footnotesize}
     \end{tcolorbox}
