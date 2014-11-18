@@ -1,14 +1,19 @@
 #Hello
 
 def reciprocal(a,b):
-   if b == 0:
-      raise ZeroDivisionError
-   return a/b
+    if isinstance(a,str) or isinstance(b,str) == True:
+        raise ValueError
+    elif b == 0:
+        raise ZeroDivisionError
+    print a/b
+
 
 try: 
-    print reciprocal(1,0)
+    reciprocal('a','b')
 except ZeroDivisionError as e:
-    print e
+    print "Zero Division Error has been caught"
+except ValueError:
+    print "Value Error has been caught"
 finally:
-    print "This is always called"
+    print "Enter a non-zero term for b"
 

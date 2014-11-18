@@ -9,7 +9,6 @@
 \usepackage{tabularx}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox}
-\usepackage{fancyvrb}
 \usepackage{enumitem}
 \usepackage{graphicx}
 
@@ -110,8 +109,8 @@ the last function call.}
 \\
 \textbf{Variables}
 \par{Another basic building block of any programming language is variables.
-    Variables consist of three components \textem{type}, \textem{identifier},
-    and a \textem{value}. Python is what is known as a \texttt{dynamic
+    Variables consist of three components \texttt{type}, \texttt{identifier},
+    and a \texttt{value}. Python is what is known as a \texttt{dynamic
     language}. What this means is that you are not required to include a type
 declaration, in contrast to strongly typed languages such as \textit{Java} or
 \textit{C++}.}
@@ -268,7 +267,7 @@ which we skip the 4th element in a list.}
 >>>
 1 2 3 5 6 7
             \end{verbatim}
-        \end{fotnotesize}
+        \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
 \\
@@ -346,9 +345,8 @@ example below.}
 \\
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
-        \begin{raggedleft}
-            \begin{footnotesize}
-                \begin{verbatim}
+        \begin{footnotesize}
+            \begin{verbatim}
 >>> class Mammal:
 >>>     weight = 0
 >>>     name = 4
@@ -370,13 +368,12 @@ example below.}
 >>>         print "Woof Woof"
 >>>
                 \end{verbatim}
-        \end{footnotesize}
-    \end{flushleft}
-\end{tcolorbox}
-\end{minipage}
-\par{You may noticed in the \textit{Mammal} class the funciton \texttt{talk}
-    just has the word \texttt{pass} in the body. Since the python language relys
-    on indentation to seperate code it is nessisary to place a statment in the
+            \end{footnotesize}
+        \end{tcolorbox}
+    \end{minipage}
+\par{You may noticed in the \textit{Mammal} class the function \texttt{talk}
+    just has the word \texttt{pass} in the body. Since the python language relies
+    on indentation to separate code it is necessary to place a statement in the
     body of a function. In python the keyword \texttt{pass} serves as a place
     holder for a function body.}
 \\
@@ -424,7 +421,7 @@ python offers a number of built in conversion functions.}
     complex(x,y) & converts x to a complex number with a real part x and an imaginary part y    \\
 \end{tabular}
 \\
-\par{In addition Python also includes a variety of functions and numberical
+\par{In addition Python also includes a variety of functions and numerical
 operators that perform standard mathematical calculations.}
 \\
 \begin{tabular}[t]{l l}
@@ -761,13 +758,13 @@ examples are done using a list, the same syntax can be applied to
     \end{tcolorbox}
 \end{minipage}
 \\
-\textbf{Exception Handeling}
-\par{Something that is gaurenteed as a programmer is that you'll eventaully run
+\textbf{Exception Handling}
+\par{Something that is guaranteed as a programmer is that you'll eventually run
 into errors. One way of mitigating the problems that may stem from these
-programming errors is to use what is called exception handeling. Handeling
+programming errors is to use what is called exception handling. Handling
 exceptions involves the use of four main constructs; \texttt{try},
 \texttt{except}, \texttt{finally} and \texttt{raise}.} 
-\par{One simple example where you might use exception handeling is creating a
+\par{One simple example where you might use exception handling is creating a
 function that takes two arguments and divides them.}
 \\
 \begin{minipage}{.75\textwidth}
@@ -793,30 +790,38 @@ Exception caught
 \end{minipage}
 \par{Another way of writing the preceding example is to raise an exception
 yourself. In the preceding example python raises an exception when you try to
-devide by zero. In the example below we'll raise an exception ourselves using
-the \texttt{raise} keyword if the second option is zero. }
+divide by zero. In the example below we'll raise an exception ourselves using
+the \texttt{raise} keyword if the values are not numbers.}
 \\
 \begin{minipage}{.75\textwidth}
     \begin{tcolorbox}
         \begin{footnotesize}
             \begin{verbatim}
 >>> def reciprocal(a,b):
->>>    if b == 0:
->>>       raise ZeroDivisionError
->>>    return a/b
->>>
->>> try: 
->>>     print reciprocal(1,0)
->>> except ZeroDivisionError as e:
->>>     print e
->>> finally:
->>>     print "This is always called"
+>>>     if isinstance(a,str) or isinstance(b,str) == True:
+>>>         raise ValueError
+>>>     print a/b
 >>> 
-
+>>> try: 
+>>>     reciprocal('a','b')
+>>> except ZeroDivisionError as e:
+>>>     print "Zero Division Error has been caught"
+>>> except ValueError:
+>>>     print "Value Error has been caught"
+>>> finally:
+>>>     print "Enter a non-zero term for b"
+Value Error has been caught
+Enter a non-zero term for b
             \end{verbatim}
         \end{footnotesize}
     \end{tcolorbox}
 \end{minipage}
+\par{The preceding example will still catch \texttt{ZeroDivision} errors if
+any should occur. However this time instead we pass the function values of the
+wrong type instead and a \texttt{ValueError} exception  is raised by the
+\texttt{reciprocal} function and caught in the \texttt{try/except} block. The
+last branch of the \texttt{try/except} block \texttt{finally} is called whether
+or not an exception is raised or not.}
 \end{document}
 
 
