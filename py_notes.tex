@@ -230,9 +230,9 @@ P-y-t-h-o-n-
 \end{minipage}
 \par{There are times when your working with loops when you may need to break out
 of the loop. Two common ways of doing this is through the keywords
-\texttt{contiue} and \texttt{break}. The first keyword \texttt{break} will like
+\texttt{continue} and \texttt{break}. The first keyword \texttt{break} will like
 the name implies break you out of the loop.}
-\par{You may notice in our previous example the the hyphinated word 'Python' has
+\par{You may notice in our previous example the hyphenated word 'Python' has
 a trailing dash, one way to deal with this is to use the break keyword in
 combination with an \texttt{if} statement.} 
 \\
@@ -253,7 +253,7 @@ P-y-t-h-o-n
     \end{tcolorbox}
 \end{minipage}
 \par{The \texttt{continue} keyword is another programming construct that will
-allow you to skip an interation of a loop. Lets take a look at an example in
+allow you to skip an iteration of a loop. Lets take a look at an example in
 which we skip the 4th element in a list.}
 \begin{minipage}{.5\textwidth}
     \begin{tcolorbox}
@@ -313,7 +313,7 @@ to a class when creating it. This can be done through the use of a special
 method call the \texttt{constructor}.}
 \par{Constructors in object oriented programming are special methods that are
     called when we create an instance of an object from a class. In order to
-    define a constructor in a Python class we use the special function init
+    define a constructor in a Python class we use the special function \texttt{init}
     function.  Lets take the previous example and change it so that we can set
 it to hold a different message.}
 \\
@@ -417,8 +417,6 @@ python offers a number of built in conversion functions.}
     int(x)       & converts x to a plain integer                                                \\
     long(x)      & converts x into a long integer                                               \\
     float(x)     & converts x into a floating-point number                                      \\
-    complex(x)   & converts x to a complex number with a real part x and an imaginary part zero \\
-    complex(x,y) & converts x to a complex number with a real part x and an imaginary part y    \\
 \end{tabular}
 \\
 \par{In addition Python also includes a variety of functions and numerical
@@ -444,7 +442,7 @@ operators that perform standard mathematical calculations.}
     a + b  & Adds two numbers together.                 \\
     a - b  & Subtracts b from a.                        \\
     a * b  & Multiplies the variables a and b together. \\
-    a / b  & Devides b by a.                            \\
+    a / b  & Divides b by a.                            \\
     a ** b & Raises a to the b power. $a^b$             \\
     a \% b & Returns the remainder of b divided by a.   \\
 \end{tabular}
@@ -636,7 +634,7 @@ use parentheses.}
     \end{tcolorbox}
 \end{minipage}
 \\
-\begin{tabular}[t]{l l}
+\begin{tabular}[t]{l l}p
     \textbf{Python List Functions}  \\
     \hline
     cmp(tuple1,tuple2) & Compares elements of both tuples.                   \\
@@ -823,5 +821,3 @@ wrong type instead and a \texttt{ValueError} exception  is raised by the
 last branch of the \texttt{try/except} block \texttt{finally} is called whether
 or not an exception is raised or not.}
 \end{document}
-
-
